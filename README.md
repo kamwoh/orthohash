@@ -1,8 +1,10 @@
-# OrthoHash (NeurIPS 2021)
+# OrthoHash
 
-Official pytorch implementation of the paper:
+[ArXiv](Coming Soon)
 
-- One Loss for All: Deep Hashing with a Single Cosine Similarity based Learning Objective (NeurIPS 2021) \[[arxiv - to be updated](https://arxiv.org/)\]
+### Official pytorch implementation of the paper: "One Loss for All: Deep Hashing with a Single Cosine Similarity based Learning Objective"
+
+#### NeurIPS 2021
 
 Released on September 29, 2021
 

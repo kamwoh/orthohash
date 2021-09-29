@@ -27,7 +27,7 @@ python val.py -l /path/to/logdir
 
 ### Category-level Retrieval (ImageNet, NUS-WIDE, MS-COCO)
 
-You may refer to this repo (https://github.com/swuxyj/DeepHash-pytorch) to download the datasets. I was using the same dataset format as [HashNet](https://github.com/thuml/HashNet).
+You may refer to this repo (https://github.com/swuxyj/DeepHash-pytorch) to download the datasets. I was using the same dataset format as [HashNet](https://github.com/thuml/HashNet). See `utils/datasets.py` to understand how to save the data folder.
 
 Dataset sample: https://raw.githubusercontent.com/swuxyj/DeepHash-pytorch/master/data/imagenet/test.txt
 
@@ -39,7 +39,23 @@ This code base is a simplified version and we did not include everything yet. We
 
 # Performance Tuning (Some Tricks)
 
-I have found some tricks to further improve the mAP score.
+I have found some tricks to further improve the mAP score.  
+
+### Avoid Overfitting
+
+As set by the previous protocols, the dataset is small in size (e.g., 13k training images for ImageNet100) and hence overfitting can easily happen during the training. 
+
+#### An appropriate learning rate for backbone
+
+We set a 10x lower learning rate for the backbone to avoid overfitting.
+
+#### Cosine Margin
+
+An appropriate higher cosine margin should be able to get higher performance as it slow down the overfitting. 
+
+#### Data Augmentation
+
+We did not tune the data augmentation, but we believe that appropriate data augmentation can obtain a little bit of improvement in mAP.
 
 ### Database Shuffling
 

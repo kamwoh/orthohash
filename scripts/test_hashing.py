@@ -30,9 +30,9 @@ def main(config):
     print('Test Dataset', len(test_loader.dataset))
     print('DB Dataset', len(db_loader.dataset))
 
-    model, extrabit = prepare_model(config, device)
-    model.load_state_dict(torch.load(f'{logdir}/models/best.pth'))
     codebook = torch.load(f'{logdir}/outputs/codebook.pth').to(device)
+    model, extrabit = prepare_model(config, device, codebook)
+    model.load_state_dict(torch.load(f'{logdir}/models/best.pth'))
 
     result_logdir = logdir + '/testing_results'
     count = 0

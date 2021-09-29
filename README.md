@@ -23,7 +23,9 @@ Run `python main.py --help` to check what hyperparameters to run with. All the h
 python val.py -l /path/to/logdir
 ```
 
-# Dataset (ImageNet, NUS-WIDE, MS-COCO)
+# Dataset
+
+### Category-level Retrieval (ImageNet, NUS-WIDE, MS-COCO)
 
 You may refer to this repo (https://github.com/swuxyj/DeepHash-pytorch) to download the datasets. I was using the same dataset format as [HashNet](https://github.com/thuml/HashNet).
 
@@ -47,7 +49,7 @@ It is because many items with same hamming distance will not be sorted properly,
 
 ### Codebook Method
 
-Run with `--codebook-method O` might help to improve mAP by 1~2%. The explanation is explained in our paper. 
+Run with `--codebook-method O` might help to improve mAP by 1~2%. The improvement is explained in our paper. 
 
 # Feedback
 

@@ -16,7 +16,7 @@ configs.default_workers = os.cpu_count()
 
 parser = argparse.ArgumentParser(description='OrthoHash')
 parser.add_argument('--nbit', default=64, type=int, help='number of bits')
-parser.add_argument('--bs', default=64, type=int, help='batch size')
+parser.add_argument('--bs', default=256, type=int, help='batch size')
 parser.add_argument('--lr', default=0.0001, type=float, help='learning rate')
 parser.add_argument('--epochs', default=100, type=int, help='training epochs')
 parser.add_argument('--ds', default='imagenet100', choices=['cifar10', 'cifar100', 'imagenet100', 'nuswide'],

@@ -250,14 +250,8 @@ def main(config):
     os.makedirs(f'{logdir}/outputs', exist_ok=True)
     json.dump(config, open(f'{logdir}/config.json', 'w+'), indent=4, sort_keys=True)
 
-    train_loader, test_loader, db_loader = prepare_dataloader(config)
-    model, extrabit = prepare_model(config, device)
-
-    optimizer = configs.optimizer(config, model.parameters())
-    scheduler = configs.scheduler(config, optimizer)
-
     nclass = config['arch_kwargs']['nclass']
-    nbit = config['arch_kwargs']['nbit'] + extrabit
+    nbit = config['arch_kwargs']['nbit']
 
     logging.info(f'Total Bit: {nbit}')
     if config['codebook_generation'] == 'N':  # normal
@@ -270,6 +264,12 @@ def main(config):
 
     codebook = codebook.sign().to(device)
     io.fast_save(codebook, f'{logdir}/outputs/codebook.pth')
+
+    train_loader, test_loader, db_loader = prepare_dataloader(config)
+    model, extrabit = prepare_model(config, device, codebook)
+
+    optimizer = configs.optimizer(config, model.parameters())
+    scheduler = configs.scheduler(config, optimizer)
 
     train_history = []
     test_history = []

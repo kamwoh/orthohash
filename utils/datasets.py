@@ -9,7 +9,7 @@ from torchvision.datasets.folder import pil_loader
 
 DATA_FOLDER = {
     'nuswide': 'data/nuswide_v2_256',
-    'imagenet': 'data/imagenet',
+    'imagenet': 'data/imagenet_resize',  # resize to 224x224
     'cifar': 'data/cifar'
 }
 

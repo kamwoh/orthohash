@@ -56,7 +56,7 @@ config = {
     'dataset': args.ds,
     'multiclass': args.ds == 'nuswide',
     'dataset_kwargs': {
-        'resize': 256 if args.ds in ['imagenet100', 'nuswide'] else 224,
+        'resize': 256 if args.ds in ['nuswide'] else 224,
         'crop': 224,
         'norm': 2,
         'evaluation_protocol': 1,  # only affect cifar10

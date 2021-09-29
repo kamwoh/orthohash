@@ -17,7 +17,8 @@ def nclass(config):
     r = {
         'imagenet100': 100,
         'cifar10': 10,
-        'nuswide': 21
+        'nuswide': 21,
+        'coco': 80
     }[config['dataset']]
 
     return r
@@ -28,7 +29,8 @@ def R(config):
         'imagenet100': 1000,
         'cifar10': 59000,  # mAP@all
         'cifar10_2': 50000,
-        'nuswide': 5000
+        'nuswide': 5000,
+        'coco': 5000
     }[config['dataset'] + {2: '_2'}.get(config['dataset_kwargs']['evaluation_protocol'], '')]
 
     return r
@@ -138,7 +140,7 @@ def dataset(config, filename, transform_mode):
     norm = config['dataset_kwargs'].get('norm', 2)
     reset = config['dataset_kwargs'].get('reset', False)
 
-    if dataset_name in ['imagenet100', 'nuswide']:
+    if dataset_name in ['imagenet100', 'nuswide', 'coco']:
         # resizec = 0 if resize == 256 else resize
         # cropc = 224 if crop == 0 else crop
         if transform_mode == 'train':
@@ -153,6 +155,11 @@ def dataset(config, filename, transform_mode):
                     transforms.Resize(resize),
                     transforms.RandomCrop(crop),
                     transforms.RandomHorizontalFlip()
+                ],
+                'coco': [
+                    transforms.Resize(resize),
+                    transforms.RandomCrop(crop),
+                    transforms.RandomHorizontalFlip()
                 ]
             }[dataset_name])
         else:
@@ -160,7 +167,8 @@ def dataset(config, filename, transform_mode):
 
         datafunc = {
             'imagenet100': datasets.imagenet100,
-            'nuswide': datasets.nuswide
+            'nuswide': datasets.nuswide,
+            'coco': datasets.coco
         }[dataset_name]
         d = datafunc(transform=transform, filename=filename)
 

@@ -144,7 +144,9 @@ def dataset(config, filename, transform_mode):
         if transform_mode == 'train':
             transform = compose_transform('train', 0, crop, 2, {
                 'imagenet100': [
-                    transforms.RandomResizedCrop(crop),
+                    # transforms.RandomResizedCrop(crop),
+                    transforms.Resize(resize),
+                    transforms.RandomCrop(crop),
                     transforms.RandomHorizontalFlip()
                 ],
                 'nuswide': [

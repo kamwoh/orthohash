@@ -104,7 +104,7 @@ logdir = (f'logs/{config["arch"]}{config["arch_kwargs"]["nbit"]}_'
           f'{config["epochs"]}_'
           f'{config["optim_kwargs"]["lr"]}_'
           f'{config["optim"]}_'
-          f'{config["sl"]}_{config["ce"]}')
+          f'{config["ce"]}')
 
 if config['tag'] != '':
     logdir += f'/{config["tag"]}_{config["seed"]}_'

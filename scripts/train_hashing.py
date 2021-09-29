@@ -76,7 +76,7 @@ def calculate_accuracy(logits, hamm_dist, labels, loss_param):
     return acc, cbacc
 
 
-def train_hashing(optimizer, model, codebook, train_loader, loss_param, uc=False):
+def train_hashing(optimizer, model, codebook, train_loader, loss_param):
     model.train()
     device = loss_param['device']
     meters = defaultdict(AverageMeter)
@@ -292,8 +292,7 @@ def main(config):
         logging.info(f'Epoch [{ep + 1}/{nepochs}]')
         res = {'ep': ep + 1}
 
-        uc = loss_param['update_time'] != 0 and (ep + 1) % loss_param['update_time'] == 0
-        train_meters = train_hashing(optimizer, model, codebook, train_loader, loss_param, uc=uc)
+        train_meters = train_hashing(optimizer, model, codebook, train_loader, loss_param)
         scheduler.step()
 
         for key in train_meters: res['train_' + key] = train_meters[key].avg

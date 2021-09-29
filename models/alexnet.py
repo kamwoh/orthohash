@@ -63,7 +63,7 @@ class AlexNet(nn.Module):
             nn.BatchNorm1d(nbit, momentum=0.1)
         )
 
-        nn.init.normal_(self.hash_fc.weight, std=0.01)
+        nn.init.normal_(self.hash_fc[0].weight, std=0.01)
         # nn.init.zeros_(self.hash_fc.bias)
 
         self.extrabit = 0

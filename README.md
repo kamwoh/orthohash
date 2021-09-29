@@ -2,7 +2,7 @@
 
 Official pytorch implementation of the paper:
 
-- One Loss for All: Deep Hashing with a Single Cosine Similarity based Learning Objective (NeurIPS 2021) [arxiv - to be updated](https://arxiv.org/)
+- One Loss for All: Deep Hashing with a Single Cosine Similarity based Learning Objective (NeurIPS 2021) \[[arxiv - to be updated](https://arxiv.org/)\]
 
 Released on September 29, 2021
 
@@ -49,7 +49,7 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 
 # Related Work
 
-1. Deep Polarized Network (DPN) - [see Repo](https://github.com/kamwoh/DPN)
+1. Deep Polarized Network (DPN) - (https://github.com/kamwoh/DPN)
 
 # License and Copyright
 

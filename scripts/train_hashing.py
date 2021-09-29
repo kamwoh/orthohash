@@ -269,7 +269,10 @@ def main(config):
     model, extrabit = prepare_model(config, device, codebook)
     print(model)
 
-    optimizer = configs.optimizer(config, model.parameters())
+    backbone_lr_scale = 0.1
+    optimizer = configs.optimizer(config, [{'params': model.get_backbone_params(),
+                                            'lr': config['optim_kwargs']['lr'] * backbone_lr_scale},
+                                           {'params': model.get_hash_params()}])
     scheduler = configs.scheduler(config, optimizer)
 
     train_history = []

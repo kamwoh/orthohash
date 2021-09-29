@@ -74,6 +74,12 @@ class AlexNet(nn.Module):
             for param in self.fc.parameters():
                 param.requires_grad_(False)
 
+    def get_backbone_params(self):
+        return list(self.features.parameters()) + list(self.fc.parameters())
+
+    def get_hash_params(self):
+        return list(self.ce_fc.parameters()) + list(self.hash_fc.parameters())
+
     def forward(self, x):
         x = self.features(x)
         x = self.avgpool(x)

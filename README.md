@@ -12,7 +12,7 @@ Released on September 29, 2021
 
 ### Training
 ```bash
-python main.py --codebook-method B --ds cifar10
+python main.py --codebook-method B --ds cifar10 --margin 0.3
 ```
 
 Run `python main.py --help` to check what hyperparameters to run with. All the hyperparameters are the default parameters to get the performance in the paper.
@@ -74,6 +74,11 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 # Related Work
 
 1. Deep Polarized Network (DPN) - (https://github.com/kamwoh/DPN)
+
+# Notes
+
+1. You may get slightly different performance as compared with the paper, the random seed sometime affect the performance a lot, but should be very close.
+2. I re-run the training (64-bit ImageNet100) with this simplified version can obtain 0.709~0.710 on average (paper: 0.711).
 
 # License and Copyright
 

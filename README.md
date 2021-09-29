@@ -27,7 +27,11 @@ You may refer to this repo (https://github.com/swuxyj/DeepHash-pytorch) to downl
 
 Dataset sample: https://raw.githubusercontent.com/swuxyj/DeepHash-pytorch/master/data/imagenet/test.txt
 
-For CIFAR-10, the code will auto create a dataset at the first run. See `utils/datasets.py`.
+For CIFAR-10, the code will auto generate a dataset at the first run. See `utils/datasets.py`.
+
+### Instance-level Retrieval (GLDv2, ROxf, RPar)
+
+This code base is a simplified version and we did not include everything yet. We will release a version that will include the dataset we have generated and also the corresponding evaluation metrics, stay tune.
 
 # Performance Tuning (Some Tricks)
 

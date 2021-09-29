@@ -12,10 +12,12 @@ Released on September 29, 2021
 
 ### Training
 ```bash
-python main.py --codebook-method B --ds cifar10 --margin 0.3
+python main.py --codebook-method B --ds cifar10 --margin 0.3 --seed 59495
 ```
 
 Run `python main.py --help` to check what hyperparameters to run with. All the hyperparameters are the default parameters to get the performance in the paper.
+
+The above command should obtain mAP of 0.824 at best for CIFAR-10. 
 
 ### Testing
 

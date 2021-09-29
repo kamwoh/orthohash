@@ -267,6 +267,7 @@ def main(config):
 
     train_loader, test_loader, db_loader = prepare_dataloader(config)
     model, extrabit = prepare_model(config, device, codebook)
+    print(model)
 
     optimizer = configs.optimizer(config, model.parameters())
     scheduler = configs.scheduler(config, optimizer)

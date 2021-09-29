@@ -276,10 +276,7 @@ def main(config):
     test_history = []
 
     loss_param = config.copy()
-    loss_param.update({
-        'ucnow': 0,
-        'device': device
-    })
+    loss_param.update({'device': device})
 
     best = 0
     curr_metric = 0

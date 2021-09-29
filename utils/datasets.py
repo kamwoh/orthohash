@@ -6,11 +6,14 @@ from torch.utils.data import Dataset
 from torchvision.datasets import CIFAR10, CIFAR100
 from torchvision.datasets.folder import pil_loader
 
-
 DATA_FOLDER = {
-    'nuswide': 'data/nuswide_v2_256',
+    'nuswide': 'data/nuswide_v2_256_resize',  # resize to 256x256
     'imagenet': 'data/imagenet_resize',  # resize to 224x224
-    'cifar': 'data/cifar'
+    'cifar': 'data/cifar',  # auto generate
+    'coco': 'data/coco',
+    'gldv2': 'data/gldv2delgembed',
+    'roxf': 'data/roxford5kdelgembed',
+    'rpar': 'data/rparis5kdelgembed'
 }
 
 
@@ -164,6 +167,14 @@ def cifar(nclass, **kwargs):
     traind.targets = combine_targets[data_index]
 
     return traind
+
+
+def coco(**kwargs):
+    transform = kwargs['transform']
+    filename = kwargs['filename']
+
+    d = HashingDataset(DATA_FOLDER['coco'], transform=transform, filename=filename)
+    return d
 
 
 def imagenet100(**kwargs):

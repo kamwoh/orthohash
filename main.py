@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO,
 torch.backends.cudnn.benchmark = True
 configs.default_workers = os.cpu_count()
 
-parser = argparse.ArgumentParser(description='DPN')
+parser = argparse.ArgumentParser(description='OrthoHash')
 parser.add_argument('--nbit', default=64, type=int, help='number of bits')
 parser.add_argument('--bs', default=64, type=int, help='batch size')
 parser.add_argument('--lr', default=0.0001, type=float, help='learning rate')

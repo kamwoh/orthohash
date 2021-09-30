@@ -1,6 +1,6 @@
 # OrthoHash
 
-[ArXiv](Coming Soon)
+[ArXiv](https://arxiv.org/abs/2109.14449)
 
 ### Official pytorch implementation of the paper: "One Loss for All: Deep Hashing with a Single Cosine Similarity based Learning Objective"
 

@@ -1,6 +1,8 @@
 # OrthoHash
 
-[ArXiv (pdf)](https://arxiv.org/abs/2109.14449)
+[ArXiv (pdf)](https://arxiv.org/abs/2109.14449) 
+
+<a href="https://github.com/kamwoh/orthohash/blob/main/docs/suppmat.pdf">Supplementary Material</a>
 
 ### Official pytorch implementation of the paper: "One Loss for All: Deep Hashing with a Single Cosine Similarity based Learning Objective"
 

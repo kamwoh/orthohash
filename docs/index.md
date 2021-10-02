@@ -17,6 +17,10 @@ removes all the hassles of tuning the weights of various losses. Importantly, ex
 show that our model is highly effective, outperforming the state-of-the-art multi-loss hashing models 
 on three large-scale instance retrieval benchmarks, often by significant margins. 
 
-## Code 
+## Code and Paper
+
+[arXiv](https://arxiv.org/abs/2109.14449)
+
+<a href="suppmat.pdf">Supplementary Material</a>
 
 [Github](https://github.com/kamwoh/orthohash)

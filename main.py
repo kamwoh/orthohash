@@ -19,7 +19,7 @@ parser.add_argument('--nbit', default=64, type=int, help='number of bits')
 parser.add_argument('--bs', default=256, type=int, help='batch size')
 parser.add_argument('--lr', default=0.0001, type=float, help='learning rate')
 parser.add_argument('--epochs', default=100, type=int, help='training epochs')
-parser.add_argument('--ds', default='imagenet100', choices=['cifar10', 'cifar100', 'imagenet100', 'nuswide'],
+parser.add_argument('--ds', default='imagenet100', choices=['cifar10', 'cifar100', 'imagenet100', 'nuswide', 'coco'],
                     help='dataset')
 parser.add_argument('--arch', default='alexnet', choices=['alexnet'], help='backbone name')
 
@@ -34,7 +34,7 @@ parser.add_argument('--multiclass-loss', default='label_smoothing',
                     choices=['bce', 'imbalance', 'label_smoothing'], help='multiclass loss types')
 
 # codebook generation
-parser.add_argument('--codebook-method', default='N', choices=['N', 'B', 'O'], help='N = sign of gaussian; '
+parser.add_argument('--codebook-method', default='B', choices=['N', 'B', 'O'], help='N = sign of gaussian; '
                                                                                     'B = bernoulli; '
                                                                                     'O = optimize')
 

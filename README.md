@@ -45,6 +45,8 @@ For CIFAR-10, the code will auto generate a dataset at the first run. See `utils
 
 This code base is a simplified version and we did not include everything yet. We will release a version that will include the dataset we have generated and also the corresponding evaluation metrics, stay tune.
 
+(Update) The datasets for instance-level retrieval are uploaded here (https://drive.google.com/drive/folders/1yVAC501OAFJac0EyQDrl6otLkLysCRjt?usp=sharing). We still haven't updated the codebase for loading the embedding and the evaluation, but you can still refer to our supplementary metarial for the evaluation protocol.
+
 # Performance Tuning (Some Tricks)
 
 I have found some tricks to further improve the mAP score.  

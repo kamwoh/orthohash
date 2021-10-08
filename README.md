@@ -12,6 +12,7 @@ Released on September 29, 2021
 
 This paper proposes a novel deep hashing model with only a single learning objective which is a simplification from most state of the art papers generally use lots of losses and regularizer. Specifically, it maximizes the cosine similarity between the continuous codes and their corresponding binary orthogonal codes to ensure both the discriminative capability of hash codes and the quantization error minimization. Besides, it adopts a Batch Normalization layer to ensure code balance and leverages the Label Smoothing strategy to modify the Cross-Entropy loss to tackle multi-labels classification. Extensive experiments show that the proposed method achieves better performance compared with the state-of-the-art multi-loss hashing methods on several benchmark datasets.
 
+![animation](static/orthohash_animation.gif)
 
 
 https://user-images.githubusercontent.com/23725126/136496588-a79646ee-6d91-4c6b-a8cf-957e3b4bd175.mp4

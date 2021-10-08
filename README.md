@@ -12,8 +12,9 @@ Released on September 29, 2021
 
 This paper proposes a novel deep hashing model with only a single learning objective which is a simplification from most state of the art papers generally use lots of losses and regularizer. Specifically, it maximizes the cosine similarity between the continuous codes and their corresponding binary orthogonal codes to ensure both the discriminative capability of hash codes and the quantization error minimization. Besides, it adopts a Batch Normalization layer to ensure code balance and leverages the Label Smoothing strategy to modify the Cross-Entropy loss to tackle multi-labels classification. Extensive experiments show that the proposed method achieves better performance compared with the state-of-the-art multi-loss hashing methods on several benchmark datasets.
 
-![animation](static/orthohash_animation.gif)
+[comment]: <> (![animation]&#40;static/orthohash_animation.gif&#41;)
 
+<img src="https://github.com/kamwoh/orthohash/blob/main/static/orthohash_animation.gif?raw=true" width="250" height="250" />
 
 https://user-images.githubusercontent.com/23725126/136496588-a79646ee-6d91-4c6b-a8cf-957e3b4bd175.mp4
 
@@ -40,7 +41,7 @@ python val.py -l /path/to/logdir
 
 ### Category-level Retrieval (ImageNet, NUS-WIDE, MS-COCO)
 
-You may refer to this repo (https://github.com/swuxyj/DeepHash-pytorch) to download the datasets. I was using the same dataset format as [HashNet](https://github.com/thuml/HashNet). See `utils/datasets.py` to understand how to save the data folder.
+You may refer to this repo (https://github.com/swuxyj/DeepHash-pytorch) to download the datasets. We were using the same dataset format as [HashNet](https://github.com/thuml/HashNet). See `utils/datasets.py` to understand how to save the data folder.
 
 Dataset sample: https://raw.githubusercontent.com/swuxyj/DeepHash-pytorch/master/data/imagenet/test.txt
 
@@ -54,7 +55,7 @@ This code base is a simplified version and we did not include everything yet. We
 
 # Performance Tuning (Some Tricks)
 
-I have found some tricks to further improve the mAP score.  
+We have found some tricks to further improve the mAP score.  
 
 ### Avoid Overfitting
 
@@ -93,7 +94,7 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 # Notes
 
 1. You may get slightly different performance as compared with the paper, the random seed sometime affect the performance a lot, but should be very close.
-2. I re-run the training (64-bit ImageNet100) with this simplified version can obtain 0.709~0.710 on average (paper: 0.711).
+2. We re-run the training (64-bit ImageNet100) with this simplified version can obtain 0.709~0.710 on average (paper: 0.711).
 
 # License and Copyright
 

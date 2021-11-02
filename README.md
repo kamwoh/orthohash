@@ -41,15 +41,15 @@ python val.py -l /path/to/logdir
 
 ### Category-level Retrieval (ImageNet, NUS-WIDE, MS-COCO)
 
-You may refer to this repo (https://github.com/swuxyj/DeepHash-pytorch) to download the datasets. We were using the same dataset format as [HashNet](https://github.com/thuml/HashNet). See `utils/datasets.py` to understand how to save the data folder.
+- You may refer to this repo (https://github.com/swuxyj/DeepHash-pytorch) to download the datasets. We were using the same dataset format as [HashNet](https://github.com/thuml/HashNet). See `utils/datasets.py` to understand how to save the data folder.
 
-Dataset sample: https://raw.githubusercontent.com/swuxyj/DeepHash-pytorch/master/data/imagenet/test.txt
+- Dataset sample: https://raw.githubusercontent.com/swuxyj/DeepHash-pytorch/master/data/imagenet/test.txt
 
-For CIFAR-10, the code will auto generate a dataset at the first run. See `utils/datasets.py`.
+- For CIFAR-10, the code will auto generate a dataset at the first run. See `utils/datasets.py`.
 
 ### Instance-level Retrieval (GLDv2, ROxf, RPar)
 
-This code base is a simplified version and we did not include everything yet. We will release a version that will include the dataset we have generated and also the corresponding evaluation metrics, stay tune.
+- This code base is a simplified version and we did not include everything yet. We will release a version that will include the dataset we have generated and also the corresponding evaluation metrics, stay tune.
 
 (Update) The datasets for instance-level retrieval are uploaded here (https://drive.google.com/drive/folders/1yVAC501OAFJac0EyQDrl6otLkLysCRjt?usp=sharing). We still haven't updated the codebase for loading the embedding and the evaluation, but you can still refer to our supplementary metarial for the evaluation protocol.
 
@@ -59,29 +59,29 @@ We have found some tricks to further improve the mAP score.
 
 ### Avoid Overfitting
 
-As set by the previous protocols, the dataset is small in size (e.g., 13k training images for ImageNet100) and hence overfitting can easily happen during the training. 
+- As set by the previous protocols, the dataset is small in size (e.g., 13k training images for ImageNet100) and hence overfitting can easily happen during the training. 
 
 #### An appropriate learning rate for backbone
 
-We set a 10x lower learning rate for the backbone to avoid overfitting.
+- We set a 10x lower learning rate for the backbone to avoid overfitting.
 
 #### Cosine Margin
 
-An appropriate higher cosine margin should be able to get higher performance as it slow down the overfitting. 
+- An appropriate higher cosine margin should be able to get higher performance as it slow down the overfitting. 
 
 #### Data Augmentation
 
-We did not tune the data augmentation, but we believe that appropriate data augmentation can obtain a little bit of improvement in mAP.
+- We did not tune the data augmentation, but we believe that appropriate data augmentation can obtain a little bit of improvement in mAP.
 
 ### Database Shuffling
 
-If you shuffle the order of database before `calculate_mAP`, you might get 1~2% improvement in mAP.
+- If you shuffle the order of database before `calculate_mAP`, you might get 1~2% improvement in mAP.
 
-It is because many items with same hamming distance will not be sorted properly, hence it will affect the mAP calculation.
+- It is because many items with same hamming distance will not be sorted properly, hence it will affect the mAP calculation.
 
 ### Codebook Method
 
-Run with `--codebook-method O` might help to improve mAP by 1~2%. The improvement is explained in our paper. 
+- Run with `--codebook-method O` might help to improve mAP by 1~2%. The improvement is explained in our paper. 
 
 # Feedback
 

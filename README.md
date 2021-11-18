@@ -49,9 +49,11 @@ python val.py -l /path/to/logdir
 
 ### Instance-level Retrieval (GLDv2, ROxf, RPar)
 
-- This code base is a simplified version and we did not include everything yet. We will release a version that will include the dataset we have generated and also the corresponding evaluation metrics, stay tune.
+- This code base is a simplified version and we did not include everything yet. We will release a version that will include the dataset we have generated and also the corresponding evaluation metrics, stay tune. 
 
 (Update) The datasets for instance-level retrieval are uploaded here (https://drive.google.com/drive/folders/1yVAC501OAFJac0EyQDrl6otLkLysCRjt?usp=sharing). We still haven't updated the codebase for loading the embedding and the evaluation, but you can still refer to our supplementary metarial for the evaluation protocol.
+
+(Update) We have released a general framework for reproducility of other deep hashing methods as well, please head to the this repo (https://github.com/CISiPLab/cisip-FIRe) for the details of loading the embedding.
 
 # Performance Tuning (Some Tricks)
 
@@ -90,6 +92,7 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 # Related Work
 
 1. Deep Polarized Network (DPN) - (https://github.com/kamwoh/DPN)
+2. Fast Image Retrieval (FIRe) - (https://github.com/CISiPLab/cisip-FIRe)
 
 # Notes
 

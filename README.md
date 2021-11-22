@@ -96,7 +96,7 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 
 # Notes
 
-1. You may get slightly different performance as compared with the paper, the random seed sometime affect the performance a lot, but should be very close.
+1. You may get slightly different performance as compared with the paper, the random seed sometime affect the performance a lot (because of the generation of the codebook), but should be very close.
 2. We re-run the training (64-bit ImageNet100) with this simplified version can obtain 0.709~0.710 on average (paper: 0.711).
 
 # License and Copyright

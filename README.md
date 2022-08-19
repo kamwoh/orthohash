@@ -51,7 +51,8 @@ python val.py -l /path/to/logdir
 
 - This code base is a simplified version and we did not include everything yet. We will release a version that will include the dataset we have generated and also the corresponding evaluation metrics, stay tune. 
 
-(Update) The datasets for instance-level retrieval are uploaded here (https://drive.google.com/drive/folders/1yVAC501OAFJac0EyQDrl6otLkLysCRjt?usp=sharing). We still haven't updated the codebase for loading the embedding and the evaluation, but you can still refer to our supplementary metarial for the evaluation protocol.
+(Update) The datasets for instance-level retrieval are uploaded here [OrthoHash Datasets](https://entuedu-my.sharepoint.com/:f:/g/personal/jiuntian001_e_ntu_edu_sg/EuuKVcqoIgZPtWsKpC5BmnwB90sJUFhPZGBxrXvglgmxEw) (address updated Aug 2022)[^1]. ~We still haven't updated the codebase for loading the embedding and the evaluation, but you can still refer to our supplementary metarial for the evaluation protocol.~ Please refer to [CISiP-FIRe](https://github.com/CISiPLab/cisip-FIRe) for embedding loading and evaluation.
+[^1]: We do not own the datasets. All datasets are own by their authors and we may have done some additional features extraction or processing.
 
 (Update) We have released a general framework for reproducility of other deep hashing methods as well, please head to the this repo (https://github.com/CISiPLab/cisip-FIRe) for the details of loading the embedding.
 

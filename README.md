@@ -6,7 +6,11 @@
 
 #### NeurIPS 2021
 
-Released on September 29, 2021
+### (Released on September 29, 2021)
+
+Updated on August, 2022 (Include datasets for instance-level retrieval)
+
+Updated on October, 2022 (Released a general framework for reproducility of other deep hashing methods at (https://github.com/CISiPLab/cisip-FIRe))
 
 # Description
 

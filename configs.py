@@ -201,8 +201,8 @@ def dataloader(d, bs=256, shuffle=True, workers=-1, drop_last=True):
 
 
 def seeding(seed):
+    seed = int(seed)           # make sure seed in `int` type
     if seed != -1:
-        seed = int(seed)           # make sure seed in `int` type
         torch.manual_seed(seed)
         np.random.seed(seed)
         random.seed(seed)

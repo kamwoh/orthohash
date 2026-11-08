@@ -32,7 +32,7 @@ def main(config):
 
     codebook = torch.load(f'{logdir}/outputs/codebook.pth').to(device)
     model, extrabit = prepare_model(config, device, codebook)
-    model.load_state_dict(torch.load(f'{logdir}/models/best.pth'))
+    model.load_state_dict(torch.load(f'{logdir}/models/best.pth', weights_only=True))
 
     result_logdir = logdir + '/testing_results'
     count = 0
